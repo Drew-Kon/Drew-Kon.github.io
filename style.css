@@ -5,7 +5,15 @@
     box-sizing: border-box;
 }
 
+html, body {
+    height: 100%; /* Ensures the body fills the screen */
+    margin: 0;
+    padding: 0;
+}
+
 body {
+    display: flex;
+    flex-direction: column;
     font-family: 'Arial', sans-serif;
     background-color: #f4f4f4;
     color: #333;
@@ -22,6 +30,7 @@ header {
     align-items: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     transition: background-color 1s ease; /* Плавная смена цвета */
+    flex-shrink: 0; /* Prevent the header from shrinking */
 }
 
     header:hover {
@@ -58,6 +67,7 @@ nav ul {
     background-color: #fff;
     padding: 50px 20px;
     text-align: center;
+    flex-grow: 1; /* Allow this section to grow and fill remaining space */
 }
 
     .intro .content {
@@ -115,6 +125,7 @@ footer {
     padding: 15px 20px;
     position: relative;
     margin-top: 40px;
+    flex-shrink: 0; /* Ensure footer stays at the bottom */
 }
 
     footer p {
