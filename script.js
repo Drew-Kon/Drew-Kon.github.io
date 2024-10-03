@@ -1,17 +1,19 @@
-﻿// Get the button element
-const button = document.getElementById('actionButton');
+﻿// Get the elements from the DOM
+const rollButton = document.getElementById('rollButton');
+const diceSelect = document.getElementById('diceSelect');
+const resultDiv = document.getElementById('result');
 
-// Add an event listener to the button
-button.addEventListener('click', function () {
-    // Change the button text when clicked
-    button.textContent = "You clicked me!";
+// Function to roll the selected dice
+function rollDice() {
+    // Get the selected dice type (e.g., d4, d20)
+    const diceSides = parseInt(diceSelect.value);
 
-    // Change the button color
-    button.style.backgroundColor = "#28a745";
+    // Generate a random number between 1 and the number of sides on the selected die
+    const roll = Math.floor(Math.random() * diceSides) + 1;
 
-    // After 2 seconds, reset everything back to normal
-    setTimeout(function () {
-        button.textContent = "Click Me!";
-        button.style.backgroundColor = "#007BFF";
-    }, 2000);
-});
+    // Display the result
+    resultDiv.textContent = `You rolled a d${diceSides}: ${roll}`;
+}
+
+// Add event listener to the button
+rollButton.addEventListener('click', rollDice);

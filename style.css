@@ -1,4 +1,4 @@
-﻿/* Reset some default styles */
+﻿/* General Styles */
 * {
     margin: 0;
     padding: 0;
@@ -12,15 +12,15 @@ body {
     line-height: 1.6;
 }
 
-/* Header styles */
+/* Header Styles */
 header {
-    background-color: #4CAF50;
     color: white;
     padding: 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    animation: rainbowBackground 10s infinite linear; /* Rainbow animation */
 }
 
 .logo {
@@ -47,6 +47,41 @@ nav ul {
             nav ul li a:hover {
                 color: #FFD700;
             }
+
+/* Keyframes for Rainbow Animation */
+@keyframes rainbowBackground {
+    0% {
+        background-color: rgb(255, 0, 0); /* Red */
+    }
+
+    14% {
+        background-color: rgb(255, 127, 0); /* Orange */
+    }
+
+    28% {
+        background-color: rgb(255, 255, 0); /* Yellow */
+    }
+
+    42% {
+        background-color: rgb(0, 255, 0); /* Green */
+    }
+
+    57% {
+        background-color: rgb(0, 0, 255); /* Blue */
+    }
+
+    71% {
+        background-color: rgb(75, 0, 130); /* Indigo */
+    }
+
+    85% {
+        background-color: rgb(238, 130, 238); /* Violet */
+    }
+
+    100% {
+        background-color: rgb(255, 0, 0); /* Red */
+    }
+}
 
 /* Intro Section */
 .intro {
@@ -87,7 +122,15 @@ button {
         background-color: #0056b3;
     }
 
-/* Footer styles */
+/* Result Display */
+.result {
+    margin-top: 20px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #4CAF50;
+}
+
+/* Footer */
 footer {
     background-color: #333;
     color: white;

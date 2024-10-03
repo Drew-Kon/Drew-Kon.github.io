@@ -3,32 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Stylish Web Page</title>
+    <title>Dice Roller</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
-        <div class="logo">My Web Page</div>
+        <div class="logo">Dicey</div>
         <nav>
             <ul>
                 <li><a href="#">Home</a></li>
                 <li><a href="#">About</a></li>
-                <li><a href="#">Services</a></li>
-                <li><a href="#">Contact</a></li>
             </ul>
         </nav>
     </header>
 
     <section class="intro">
         <div class="content">
-            <h1>Welcome to My Stylish Web Page</h1>
-            <p>This is a simple but elegant webpage designed with HTML, CSS, and JavaScript.</p>
-            <button id="actionButton">Click Me!</button>
+            <h1>Roll Your Dice!</h1>
+            <p>Choose a dice type and click the button to roll.</p>
+            
+            <!-- Dropdown for dice type -->
+            <label for="diceSelect">Choose Dice:</label>
+            <select id="diceSelect">
+                <option value="4">d4</option>
+                <option value="6">d6</option>
+                <option value="8">d8</option>
+                <option value="10">d10</option>
+                <option value="12">d12</option>
+                <option value="20">d20</option>
+            </select>
+
+            <!-- Button to roll the selected dice -->
+            <button id="rollButton">Roll Dice</button>
+
+            <!-- Area to display the result -->
+            <div id="result" class="result"></div>
         </div>
     </section>
 
     <footer>
-        <p>&copy; 2024 Dicey. All rights reserved.</p>
+        <p>&copy; 2024 Dice Roller. All rights reserved.</p>
     </footer>
 
     <script src="script.js"></script>
