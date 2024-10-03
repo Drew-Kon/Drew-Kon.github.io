@@ -1,16 +1,14 @@
 ﻿$(document).ready(function () {
-    // Dice Roll Function
     $('#rollButton').click(function () {
-        // Get the selected dice type (d4, d6, d20, etc.)
         const diceSides = $('#diceSelect').val();
 
-        // Проверка на случай, если тип кубика не выбран
+        // Проверка, выбран ли тип кубика
         if (!diceSides) {
             $('#result').text('Please select a valid dice type.').fadeIn();
             return;
         }
 
-        // Генерация случайного броска
+        // Генерация случайного числа от 1 до количества сторон кубика
         const roll = Math.floor(Math.random() * diceSides) + 1;
 
         // Отображение результата
