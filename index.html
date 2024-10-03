@@ -3,12 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dice Roller</title>
+    <title>Dice Roller with jQuery</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 <body>
     <header>
-        <div class="logo">Dicey</div>
+        <div class="logo">Dice Roller</div>
         <nav>
             <ul>
                 <li><a href="#">Home</a></li>
@@ -22,7 +23,6 @@
             <h1>Roll Your Dice!</h1>
             <p>Choose a dice type and click the button to roll.</p>
             
-            <!-- Dropdown for dice type -->
             <label for="diceSelect">Choose Dice:</label>
             <select id="diceSelect">
                 <option value="4">d4</option>
@@ -33,10 +33,9 @@
                 <option value="20">d20</option>
             </select>
 
-            <!-- Button to roll the selected dice -->
             <button id="rollButton">Roll Dice</button>
 
-            <!-- Area to display the result -->
+            <!-- Ensure result container is visible and has the correct ID -->
             <div id="result" class="result"></div>
         </div>
     </section>
